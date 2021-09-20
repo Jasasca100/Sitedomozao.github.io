@@ -4,10 +4,17 @@
 <title>Teste 2</title>
 </head>
 <body>
-<h1>Filmes:</h1>
+<h1>Cadastro:</h1>
 <form>
-<input type="text" placeholder="Nome">
-<input type="data" placeholder="Nascimento"
+<input type="text" id="nome" placeholder="Nome">
+<input type="data" id="nascimento"placeholder="Nascimento">
+<input type="button" onclick="clickou()">Cadastro Completo</input>
 </form>
+  <script>
+    const conteudo = (getById("nome").value + getById("nascimento").value);
+  function clickou(){
+  console.log(conteudo);
+  }
+  </script>
 </body>
 </html>
