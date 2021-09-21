@@ -9,12 +9,15 @@
 <input type="text" id="nome" placeholder="Nome">
 <input type="date" id="nascimento"placeholder="Nascimento">
 <input type="submit" onclick="clickou()" value="Cadastro Completo">
+<h1>
 </form>
   <script>
 
   function clickou(){
   const conteudo = (document.getElementById("nome").value +" "+ document.getElementById("nascimento").value);
   console.log(conteudo);
+    const nome = document.getElementById("nome").value;
+    document.getElementByName("h1") = "Obrigado por se cadastrar " + nome;
   }
   </script>
 </body>
