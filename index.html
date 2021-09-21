@@ -1,24 +1,52 @@
-﻿<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Teste 2</title>
+    <title>Site do mozão</title>
+    <style type="text/css">
+        label{
+            color:blue ;
+
+        }
+        input {
+            background: red;
+            border: chartreuse;
+            width: 500px;
+            border-radius: 50px;
+            border-width: 100px;
+            cursor: pointer;
+
+        }
+    </style>
 </head>
 <body>
-<h1>Cadastro:</h1>
-<form target="_blank"action="https://jasasca100.github.io/Site.github.io/index2.html">
-<input type="text" id="nome" placeholder="Nome">
-<input type="date" id="nascimento"placeholder="Nascimento">
-<input type="submit" onclick="clickou()" value="Cadastro Completo">
-<h1>
-</form>
-  <script>
+    <label for="range">Quão bem você esta hoje?</label><br>
+    
+    <h1 id="h3" ></h1>
+    <input type="range" id="range" min="-100" max="100" placeholder="aaaaa to asadas"><br>
+    <button id="salvar"onclick="clickou()">Salvar</button>
+    <h1 id="h1"></h1>
+    <h1 id="h2"></h1>
+    <script>
+        function clickou(){
+         var range = document.getElementById("range").value;
+        document.getElementById("h1").innerHTML = range;
+        console.log(range);
+        if (range <= 100) {
 
-  function clickou(){
-  const conteudo = (document.getElementById("nome").value +" "+ document.getElementById("nascimento").value);
-  console.log(conteudo);
-    const nome = document.getElementById("nome").value;
-    document.getElementByName("h1") = "Obrigado por se cadastrar " + nome;
-  }
-  </script>
+            document.getElementById("h2").innerHTML = "melhore";
+        }
+        else{
+
+            document.getElementById("h2").innerHTML = "tudo ok";
+        }
+        
+        }
+        setTimeout(function run(){
+            var range = document.getElementById("range").value;
+            document.getElementById("h3").innerHTML = range + "%";
+            setTimeout(run, 20);
+        }, 20);
+
+    </script>
 </body>
 </html>
