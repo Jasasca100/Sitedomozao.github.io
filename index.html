@@ -34,7 +34,7 @@
          var range = document.getElementById("range").value;
         document.getElementById("h1").innerHTML = range;
         console.log(range);
-        if (range <= 100) {
+        if (range <= 0) {
 
             document.getElementById("h2").innerHTML = "melhore";
         }
@@ -46,7 +46,7 @@
         }
         setTimeout(function run(){
             var range = document.getElementById("range").value;
-            document.getElementById("h3").innerHTML = range + "%";
+            document.getElementById("h3").innerHTML = range + " %";
             setTimeout(run, 20);
         }, 20);
 
