@@ -32,15 +32,15 @@
     </div>
        <br>
         <input type="range" id="range" min="-100" max="100" placeholder="aaaaa to asadas"><br>
-        <button id="salvar"onclick="clickou()">Salvar</button>
-    <button onclickou="proximaPagina()">Próxima página</button>
+        <button id="salvar"onclick="salvar()">Salvar</button>
+        <button id="proxima"onclickou="proximaPagina()">Próxima página</button>
         <p id="h1"></p>
     
     <script>
         function proximaPagina(){
          window.open("https://jasasca100.github.io/Sitedomozao.github.io/index2.html");
         }
-        function clickou(){
+        function salvar(){
          var range = document.getElementById("range").value;
         if (range <= 0) {
 
